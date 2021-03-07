@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Purchase Form</title>
+    <style>
+        #receipt {
+            border-top: 5px solid red;
+            border-left: 5px solid red;
+            border-bottom: 5px solid darkred;
+            border-right: 5px solid darkred;
+            background-color: pink;
+            text-align: left;
+            width: 350px;
+            height: 250px;
+            padding: 15px;
+        }
+
+        #receipt fieldset {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        form {
+            background-color: lightblue;
+            width: 275px;
+            height: 400px;
+            border-top: 5px solid gray;
+            border-left: 5px solid gray;
+            border-bottom: 5px solid black;
+            border-right: 5px solid black;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .right_input {
+            float: right;
+            margin-right: 15px;
+        }
+
+        .states {
+            float: right;
+            margin-right: 121px;
+        }
+
+        .submitButton {
+            margin-left: 5px;
+        }
+
+        #heading {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/purchase">
+        <p id="heading">Product Purchase</p>
+        <div>First Name <input name="first_name" type="text" class="right_input" required><br><br></div>
+        <div>Last Name <input name="last_name" type="text" class="right_input" required><br><br></div>
+        <div>Phone <input name="phone_number" type="text" class="right_input" required><br><br></div>
+        <div>City <input name="city" type="text" class="right_input" required><br><br></div>
+        <div>State <input name="state" type="text" class="right_input" required><br><br></div>
+        <div>Zip <input name="zip_code" type="text" class="right_input" required><br><br></div>
+        Quantity (1-5) <input name="quantity" type="number" min="1" max="5" required><br>
+        <br><input type="submit" class="submitButton">
+    </form>
+    <div id="results"></div>
+</body>
+</html>
