@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const mongoURI = "mongodb+srv://test:testing1234@mongodb-workshop.j62wb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const mongoURI = "Your MongoDB URI goes here";
 
 const connectOptions = {
   keepAlive: true,
