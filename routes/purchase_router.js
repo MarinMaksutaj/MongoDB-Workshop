@@ -10,6 +10,7 @@ purchaseRouter.get("/purchase" , async (req, res) => {
 
 purchaseRouter.post("/purchase" , async (req, res) => {
     try{
+        // create a new document
         const newPurchase =  await Purchase.create({
             first_name: req.body.first_name,
             last_name: req.body.last_name,
@@ -19,6 +20,7 @@ purchaseRouter.post("/purchase" , async (req, res) => {
             zip: req.body.zip_code,
             quantity: 2
         });
+        // save that document into our database
         newPurchase.save();
         res.redirect("/");
     } catch(error) {
